@@ -1,0 +1,81 @@
+# Credit Card Fraud Detection using Logistic Regression
+
+## Overview
+
+This project demonstrates a basic machine learning pipeline for detecting fraudulent credit card transactions using Python and scikit-learn. The model is trained on a credit card transaction dataset to classify each transaction as either **legitimate** or **fraudulent**.
+
+The project covers the complete workflow from data loading and preprocessing to model training and evaluation.
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+
+## Project Workflow
+
+1. Load the credit card transaction dataset.
+2. Inspect the dataset using `info()` and check for missing values.
+3. Remove rows containing missing values using `dropna()`.
+4. Separate the dataset into:
+
+   * **Features (X)** – Transaction attributes
+   * **Target (y)** – `Class`
+
+     * `0` → Legitimate Transaction
+     * `1` → Fraudulent Transaction
+5. Split the dataset into training and testing sets using an 80:20 ratio.
+6. Train a Logistic Regression model.
+7. Predict transaction classes on the test dataset.
+8. Evaluate model performance using:
+
+   * Accuracy Score
+   * Classification Report
+   * Confusion Matrix
+9. Test the model by predicting the class of a sample transaction.
+
+## Evaluation Metrics
+
+The following metrics are used to evaluate the model:
+
+* **Accuracy Score** – Overall prediction accuracy.
+* **Classification Report** – Includes Precision, Recall, and F1-score.
+* **Confusion Matrix** – Shows the number of correct and incorrect predictions.
+
+
+
+## Sample Code
+
+```python
+model = LogisticRegression(max_iter=1000)
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+```
+
+## Future Improvements
+
+* Feature scaling using `StandardScaler`
+* Handle class imbalance using `class_weight="balanced"` or SMOTE
+* Compare multiple machine learning algorithms such as Random Forest and XGBoost
+* Perform hyperparameter tuning
+* Evaluate using ROC-AUC and Precision-Recall curves
+* Build a simple web interface using Flask or Streamlit
+
+## Learning Outcomes
+
+This project demonstrates practical knowledge of:
+
+* Data preprocessing with Pandas
+* Handling missing values
+* Train-test splitting
+* Binary classification
+* Logistic Regression
+* Model evaluation using scikit-learn
+* Making predictions on unseen data
+
+## License
+
+This project is intended for educational and learning purposes.
